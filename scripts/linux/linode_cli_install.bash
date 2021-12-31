@@ -1,1 +1,1 @@
-#TODO install linode cli
+pip3 install linode-cli --upgrade

@@ -1,1 +1,1 @@
-#TODO install ansible with pip3
+sudo python -m pip install ansible
