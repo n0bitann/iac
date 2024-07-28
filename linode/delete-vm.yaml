@@ -1,0 +1,33 @@
+---
+- name: crate Linode vm for microk8s
+  hosts: localhost
+  tasks:
+    - name: Delete Linode VM-1
+      linode.cloud.instance:
+        label: microk8s-master-1
+        state: absent
+
+    - name: Delete Linode VM-2
+      linode.cloud.instance:
+        label: microk8s-master-2
+        state: absent
+
+    - name: Delete Linode VM-3
+      linode.cloud.instance:
+        label: microk8s-master-3
+        state: absent
+
+    - name: Delete Linode VM-node-1
+      linode.cloud.instance:
+        label: microk8s-node-1
+        state: absent
+
+    - name: Delete Linode VM-node-2
+      linode.cloud.instance:
+        label: microk8s-node-2
+        state: absent
+
+    - name: Delete Linode VM-node-3
+      linode.cloud.instance:
+        label: microk8s-node-3
+        state: absent

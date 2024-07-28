@@ -1,0 +1,9 @@
+- name: List all of the instances for the current Linode Account
+  hosts: localhost
+  tasks:
+    - name: List all of the Linode instances
+      linode.cloud.instance_list: {}
+      register: linode_instances
+    - debug:
+        var: linode_instances.instances
+      

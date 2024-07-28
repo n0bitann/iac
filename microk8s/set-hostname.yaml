@@ -1,0 +1,8 @@
+---
+- name: Set hostname for microk8s
+  hosts: microk8s
+  tasks:
+    - name: Set hostname microk8s
+      ansible.builtin.hostname:
+        name: "{{ host }}"
+

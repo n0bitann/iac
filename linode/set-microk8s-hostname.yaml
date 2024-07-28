@@ -1,0 +1,27 @@
+---
+- name: Set hostname for microk8s
+  hosts: microk8s
+  tasks:
+    - name: Set hostname microk8s-master-1
+      ansible.builtin.hostname:
+        name: "{{ inventory_hostname }}"
+
+    - name: Set hostname microk8s-master-2
+      ansible.builtin.hostname:
+        name: "{{ inventory_hostname }}"
+
+    - name: Set hostname microk8s-master-3
+      ansible.builtin.hostname:
+        name: "{{ inventory_hostname }}"
+
+    - name: Set hostname microk8s-node-1
+      ansible.builtin.hostname:
+        name: "{{ inventory_hostname }}"
+
+    - name: Set hostname microk8s-node-2
+      ansible.builtin.hostname:
+        name: "{{ inventory_hostname }}"
+
+    - name: Set hostname microk8s-node-3
+      ansible.builtin.hostname:
+        name: "{{ inventory_hostname }}"

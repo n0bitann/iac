@@ -1,0 +1,3 @@
+.envrc
+linode/group_vars/vars.yaml
+*.ini
