@@ -4,6 +4,6 @@
     - name: List all of the Linode instances
       linode.cloud.instance_list: {}
       register: linode_instances
-    - debug:
+    - name: Show to console
+      debug:
         var: linode_instances.instances
-      

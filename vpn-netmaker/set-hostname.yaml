@@ -1,0 +1,7 @@
+---
+- name: Set hostname for vpn servers
+  hosts: vpn
+  tasks:
+    - name: Set hostname vpn servers
+      ansible.builtin.hostname:
+        name: "{{ host }}"

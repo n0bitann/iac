@@ -1,0 +1,167 @@
+---
+- name: Create vpn client vm
+  hosts: localhost
+  vars_files:
+    - ./group_vars/vars.yaml
+  tasks:
+    - name: Create client-vm-01
+      linode.cloud.instance:
+        label: client-vm-01
+        region: ap-south
+        type: g6-standard-2
+        image: linode/ubuntu22.04
+        tags: vpn
+        authorized_keys: "{{public_key}}"
+        state: present
+
+    - name: Create client-vm-02
+      linode.cloud.instance:
+        label: client-vm-02
+        region: ap-south
+        type: g6-standard-2
+        image: linode/ubuntu22.04
+        tags: vpn
+        authorized_keys: "{{public_key}}"
+        state: present
+
+    - name: Create client-vm-03
+      linode.cloud.instance:
+        label: client-vm-03
+        region: ap-south
+        type: g6-standard-2
+        image: linode/ubuntu22.04
+        tags: vpn
+        authorized_keys: "{{public_key}}"
+        state: present
+    
+    - name: Create client-vm-04
+      linode.cloud.instance:
+        label: client-vm-04
+        region: ap-south
+        type: g6-standard-2
+        image: linode/ubuntu22.04
+        tags: vpn
+        authorized_keys: "{{public_key}}"
+        state: present
+      register: linode_instance
+
+    - name: Create client-vm-05
+      linode.cloud.instance:
+        label: client-vm-05
+        region: ap-south
+        type: g6-standard-2
+        image: linode/ubuntu22.04
+        authorized_keys: "{{ public_key }}" 
+        tags: vpn
+        state: present
+
+    - name: Create client-vm-06
+      linode.cloud.instance:
+        label: client-vm-06
+        region: ap-south
+        type: g6-standard-2
+        image: linode/ubuntu22.04
+        authorized_keys: "{{public_key}}"
+        tags: vpn
+        state: present
+
+    - name: Create client-vm-07
+      linode.cloud.instance:
+        label: client-vm-07
+        region: ap-south
+        type: g6-standard-2
+        image: linode/ubuntu22.04
+        authorized_keys: "{{public_key}}"
+        tags: vpn
+        state: present
+
+    - name: Create client-vm-08
+      linode.cloud.instance:
+        label: client-vm-08
+        region: ap-south
+        type: g6-standard-2
+        image: linode/ubuntu22.04
+        authorized_keys: "{{ public_key }}"
+        tags: vpn
+        state: present
+
+    - name: Create client-vm-09
+      linode.cloud.instance:
+        label: client-vm-09
+        region: ap-south
+        type: g6-standard-2
+        image: linode/ubuntu22.04
+        authorized_keys: "{{ public_key }}"
+        tags: vpn
+        state: present
+
+    - name: Create client-vm-10
+      linode.cloud.instance:
+        label: client-vm-10
+        region: ap-south
+        type: g6-standard-2
+        image: linode/ubuntu22.04
+        authorized_keys: "{{ public_key }}"
+        tags: vpn
+        state: present
+
+
+    - name: Create client-vm-11
+      linode.cloud.instance:
+        label: client-vm-11
+        region: ap-south
+        type: g6-standard-2
+        image: linode/ubuntu22.04
+        authorized_keys: "{{ public_key }}"
+        tags: vpn
+        state: present
+
+    - name: Create client-vm-12
+      linode.cloud.instance:
+        label: client-vm-12
+        region: ap-south
+        type: g6-standard-2
+        image: linode/ubuntu22.04
+        authorized_keys: "{{ public_key }}"
+        tags: vpn
+        state: present
+
+    - name: Create client-vm-13
+      linode.cloud.instance:
+        label: client-vm-13
+        region: ap-south
+        type: g6-standard-2
+        image: linode/ubuntu22.04
+        authorized_keys: "{{ public_key }}"
+        tags: vpn
+        state: present
+
+    - name: Create client-vm-14
+      linode.cloud.instance:
+        label: client-vm-14
+        region: ap-south
+        type: g6-standard-2
+        image: linode/ubuntu22.04
+        authorized_keys: "{{ public_key }}"
+        tags: vpn
+        state: present
+
+    - name: Create client-vm-15
+      linode.cloud.instance:
+        label: client-vm-15
+        region: ap-south
+        type: g6-standard-2
+        image: linode/ubuntu22.04
+        authorized_keys: "{{ public_key }}"
+        tags: vpn
+        state: present
+
+    - name: Create client-vm-16
+      linode.cloud.instance:
+        label: client-vm-16
+        region: ap-south
+        type: g6-standard-2
+        image: linode/ubuntu22.04
+        authorized_keys: "{{ public_key }}"
+        tags: vpn
+        state: present

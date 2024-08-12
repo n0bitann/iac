@@ -1,0 +1,85 @@
+---
+- name: Delete Linode vm for vpn client
+  hosts: localhost
+  vars_files:
+    - ./group_vars/vars.yaml
+  tasks:
+    - name: Delete client vm 01
+      linode.cloud.instance:
+        label: client-vm-01
+        state: absent
+
+    - name: Delete client vm 02
+      linode.cloud.instance:
+        label: client-vm-02
+        state: absent
+
+    - name: Delete client vm 03
+      linode.cloud.instance:
+        label: client-vm-03
+        state: absent
+    
+    - name: Delete client vm 04
+      linode.cloud.instance:
+        label: client-vm-04
+        state: absent
+    
+    - name: Delete client vm 05
+      linode.cloud.instance:
+        label: client-vm-05
+        state: absent                
+    
+    - name: Delete client vm 06
+      linode.cloud.instance:
+        label: client-vm-06
+        state: absent
+
+    - name: Delete client vm 07
+      linode.cloud.instance:
+        label: client-vm-07
+        state: absent
+
+    - name: Delete client vm 08
+      linode.cloud.instance:
+        label: client-vm-08
+        state: absent
+    
+    - name: Delete client vm 09
+      linode.cloud.instance:
+        label: client-vm-09
+        state: absent
+    
+    - name: Delete client vm 10
+      linode.cloud.instance:
+        label: client-vm-10
+        state: absent
+
+    - name: Delete client vm 11
+      linode.cloud.instance:
+        label: client-vm-11
+        state: absent
+
+    - name: Delete client vm 12
+      linode.cloud.instance:
+        label: client-vm-12
+        state: absent
+
+    - name: Delete client vm 13
+      linode.cloud.instance:
+        label: client-vm-13
+        state: absent        
+
+    - name: Delete client vm 14
+      linode.cloud.instance:
+        label: client-vm-14
+        state: absent
+
+    - name: Delete client vm 15
+      linode.cloud.instance:
+        label: client-vm-15
+        state: absent
+
+    - name: Delete client vm 16
+      linode.cloud.instance:
+        label: client-vm-16
+        state: absent

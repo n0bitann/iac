@@ -1,9 +1,10 @@
 ---
 - name: Get ssh key
   hosts: localhost
-  tasks: 
+  tasks:
     - name: List all of the Linode ssh keys
       linode.cloud.ssh_key_list: {}
       register: linode_ssh_keys
-    - debug:
+    - name: Show to console 
+      ansible.builtin.debug:
         var: linode_ssh_keys

@@ -1,5 +1,5 @@
 ---
-- name: crate Linode vm for microk8s
+- name: Crate Linode vm for microk8s
   hosts: localhost
   vars_files:
     - ./group_vars/vars.yaml
@@ -11,10 +11,8 @@
         type: g6-standard-2
         image: linode/ubuntu22.04
         tags: microk8s
-        authorized_keys: "{{public_key}}"
+        authorized_keys: "{{ public_key }}"
         state: present
-      
-
 
     - name: Create microk8s-master-2
       linode.cloud.instance:
@@ -23,9 +21,8 @@
         type: g6-standard-2
         image: linode/ubuntu22.04
         tags: microk8s
-        authorized_keys: "{{public_key}}"
+        authorized_keys: "{{ public_key }}"
         state: present
-
 
     - name: Create microk8s-master-3
       linode.cloud.instance:
@@ -34,9 +31,9 @@
         type: g6-standard-2
         image: linode/ubuntu22.04
         tags: microk8s
-        authorized_keys: "{{public_key}}"
+        authorized_keys: "{{ public_key }}"
         state: present
-    
+
     - name: Create microk8s-node-1
       linode.cloud.instance:
         label: microk8s-node-1
@@ -44,7 +41,7 @@
         type: g6-standard-2
         image: linode/ubuntu22.04
         tags: microk8s
-        authorized_keys: "{{public_key}}"       
+        authorized_keys: "{{ public_key }}"
         state: present
       register: linode_instance
 
@@ -55,7 +52,7 @@
         type: g6-standard-2
         image: linode/ubuntu22.04
         tags: microk8s
-        authorized_keys: "{{public_key}}" 
+        authorized_keys: "{{ public_key }}" 
         state: present
 
     - name: Create microk8s-node-3
@@ -64,8 +61,6 @@
         region: ap-south
         type: g6-standard-2
         image: linode/ubuntu22.04
-        authorized_keys: "{{public_key}}"
+        authorized_keys: "{{ public_key }}"
         tags: microk8s
         state: present
-
-
