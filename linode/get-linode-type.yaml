@@ -5,16 +5,13 @@
     - ./group_vars/vars.yaml
   tasks:
     - name: List all of the Linode instance types
-      
       linode.cloud.instance_type_list: {}
-    
       register: linode_instance_types
     - debug:
         var: linode_instance_types
-    
+
     - name: List all of the Linode regions
       linode.cloud.region_list: {}
-    
       register: linode_regions
     - debug:
         var: linode_regions

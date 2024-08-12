@@ -1,0 +1,15 @@
+---
+- name: Install netmaker client
+  hosts: vpn
+  tasks:
+    - name: Downloads Netmaker client
+      ansible.builtin.get_url:
+        url: https://fileserver.netmaker.io/releases/download/v0.24.3/netclient-linux-amd64
+        dest: /tmp/netclient
+        mode: 0700
+    - name: Install Netmaker client
+      ansible.builtin.shell: ./netclient install
+      args:
+        chdir: /tmp
+    - name: Join to network
+      ansible.builtin.shell: netclient join -t {{netmaker_network_join_token}}
